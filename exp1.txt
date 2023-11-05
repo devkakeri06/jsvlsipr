@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Experiment 1</title>
+</head>
+<body>
+<script>
+const pi = 3.14;
+var a = 12;
+var b = 8;
+document.write("For rectangle: <br>");
+document.write("Length = " + a + " Width = " + b + "<br>");
+document.write("Area = " + (a*b) + "<br><hr style='border-top: dashed #B9B4C7' width = '400' size = '3' align = 'left'>");
+document.write("For Triangle: <br>");
+document.write("Height = " + a + " Base = " + b + "<br>");
+document.write("Area = " + (a*b)/2 + "<br><hr style='border-top: dashed #B9B4C7' width = '400' size = '3' align = 'left'>");
+document.write("For circle: <br>");
+document.write("Radius = " + a + "<br>");
+document.write("Area = " + (pi*a*a) + "<br><hr style='border-top: dashed #B9B4C7' width = '400' size = '3' align = 'left'>");
+document.write("Name: Devaansh Kakeri")
+</script>
+</body>
+</html>

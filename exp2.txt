@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Experiment 2</title>
+</head>
+<body>
+<script>
+var n = prompt("Enter the integer: ");
+document.write("Table of "+ n + ":<br>");
+for (let i=1; i<11;i++){
+document.write(n*i+"</br>");
+}
+document.write("<hr style='border-top: dashed #B9B4C7' width = '400' size = '3' align = 'left'> Name: Devaansh Kakeri ");
+</script>
+</body>
+</html>

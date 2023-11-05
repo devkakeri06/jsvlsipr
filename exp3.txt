@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Experiment 3</title>
+</head>
+<body>
+<script>
+const str = prompt("Enter your word: ");
+const length = str.length;
+//reverse string
+document.write("Original String: " + str + "<br>");
+var reversedString = "";
+for (let i = length; i > -1; i--) {
+reversedString += str.charAt(i);
+}
+document.write("Reversed String: " + reversedString + "<br>");
+//replace string
+const oldChar = prompt("Enter the character to be replaced: ");
+const newChar = prompt("Enter the new character: ");
+var replacedString = str.replace(oldChar, newChar);
+document.write("Replaced String: " + replacedString + "<br>");
+//is palindrome
+var isPalindrome = true;
+for (var i = 0; i < length / 2; i++) {
+if (str[i] !== str[length - 1 - i]) {
+isPalindrome = false;
+break;
+}
+}
+if (isPalindrome) {
+document.write(str + " is palindrome.");
+} else {
+document.write(str + " is not palindrome.");
+}
+document.write("<hr style='border-top: dashed #B9B4C7' width = '400' size = '3' align = 'left'> Name: Devaansh Kakeri");
+</script>
+</body>
+</html>

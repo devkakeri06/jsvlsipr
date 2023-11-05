@@ -1,0 +1,57 @@
+// Set Union Operation
+function union(a, b) {
+let unionSet = new Set(a);
+for (let i of b) {
+unionSet.add(i);
+}
+return unionSet;
+} // two sets of fruits
+const setA = new Set(["apple", "mango", "orange"]);
+const setB = new Set(["grapes", "apple", "banana"]);
+const result = union(setA, setB);
+console.log("A : ", setA);
+console.log("B : ", setB);
+console.log(result);
+console.log("Name: Devaansh Kakeri"); Output:- Code:- // Set Intersection Operation
+function intersection(setA, setB) {
+let intersectionSet = new Set();
+for (let i of setB) {
+if (setA.has(i)) {
+intersectionSet.add(i);
+}
+}
+return intersectionSet;
+}
+// two sets of fruits
+const setA = new Set(["apple", "mango", "orange"]);
+const setB = new Set(["grapes", "apple", "banana"]);
+const result = intersection(setA, setB);
+console.log("A : ", setA);
+console.log("B : ", setB);
+console.log(result);
+console.log("Name: Devaansh Kakeri"); Output:- Code:- //difference operation
+function difference(setA, setB) {
+let differenceSet = new Set(setA);
+for (let i of setB) {
+differenceSet.delete(i);
+}
+return differenceSet;
+}
+// two sets of fruits
+const setA = new Set(["apple", "mango", "orange"]);
+const setB = new Set(["grapes", "apple", "banana"]);
+const result = difference(setA, setB);
+console.log("A : ", setA);
+console.log("B : ", setB);
+console.log(result);
+console.log("Name: Devaansh Kakeri"); Output:- Code:- //subset operation
+function subset(setA, setB) {
+for (let i of setB) {
+if (!setA.has(i))
+return false
+}return true
+} // two sets of fruits
+const setA = new Set(['apple', 'mango', 'orange']);
+const setB = new Set(['apple', 'orange']);
+const result = subset(setA, setB);
+console.log("Name: Devaansh Kakeri");
