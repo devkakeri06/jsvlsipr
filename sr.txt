@@ -1,0 +1,37 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+entityShiftReg is
+Port ( Din : in STD_LOGIC_VECTOR (3 downto 0);
+MOD1 : in STD_LOGIC_VECTOR (1 downto 0);
+CLK : in STD_LOGIC;
+RST : in STD_LOGIC;
+Dout : buffer STD_LOGIC_VECTOR (3 downto 0));
+endShiftReg;
+architecture Behavioral of ShiftReg is
+signal MSBIN, LSBIN: STD_LOGIC;
+signal TEMP: STD_LOGIC_VECTOR(3 DOWNTO 0);
+begin
+MSBIN <= Din(3);
+LSBIN <= Din(0);
+PROCESS (CLK, RST)
+BEGIN
+IF (RST = '1') THEN
+Dout<= "0000";
+TEMP <= "0000";
+ELSIF (CLK'EVENT AND CLK = '1') THEN
+CASE MOD1 IS
+WHEN "00" =>
+Dout<= MSBIN &Dout(3 DOWNTO 1); -- Adjusted this line
+WHEN "01" =>
+Dout<= Din;
+WHEN "10" =>
+TEMP <= MSBIN &TEMP(3 DOWNTO 1); -- Adjusted this line
+Dout<= TEMP;
+WHEN "11" =>
+Dout<= Dout(2 DOWNTO 0) & LSBIN;
+WHEN OTHERS =>
+Dout<= "0000";
+END CASE;
+END IF;
+END PROCESS;
+end Behavioral;
